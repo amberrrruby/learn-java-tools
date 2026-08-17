@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="taskmanager.TaskManagerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-08-16T05:25:12.774Z" hostname="931EE1B4-AFEF-4" time="0.138">
+  <properties/>
+  <testcase name="completingTaskSetsCompletedFlag()" classname="taskmanager.TaskManagerTest" time="0.056"/>
+  <testcase name="getTasksReturnsAllTasksRegardlessOfStatus()" classname="taskmanager.TaskManagerTest" time="0.005"/>
+  <testcase name="completingNonExistentIdDoesNothing()" classname="taskmanager.TaskManagerTest" time="0.008"/>
+  <testcase name="addingTaskIncreasesListSize()" classname="taskmanager.TaskManagerTest" time="0.002"/>
+  <testcase name="getTasksOnEmptyManagerReturnsEmptyList()" classname="taskmanager.TaskManagerTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

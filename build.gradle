@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+    id 'checkstyle'
+}
+
+group = 'com.taskmanager'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+checkstyle {
+    toolVersion = '10.18.1'
+    configFile = file('config/checkstyle/checkstyle.xml')
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+    useJUnitPlatform()
+    finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+    dependsOn test
+    reports {
+        html.required = true
+        xml.required = true
+    }
+}
