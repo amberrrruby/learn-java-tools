@@ -1,0 +1,26 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class Task {
+  - id : int
+  - title : String
+  - completed : boolean
+  + Task(id : int, title : String)
+  + getId() : int
+  + getTitle() : String
+  + isCompleted() : boolean
+  + setCompleted(isCompleted : boolean) : void
+}
+
+class TaskManager {
+  - tasks : List<Task>
+  - nextId : int
+  + addTask(title : String) : void
+  + completeTask(id : int) : void
+  + getTasks() : List<Task>
+}
+
+TaskManager *-- Task : contains
+
+@enduml
